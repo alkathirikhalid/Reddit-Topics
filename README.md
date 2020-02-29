@@ -4,13 +4,13 @@ Reddit topics with up vote and down votes
 Functionality that must be present:
 
 ● Req 1: Maintain a list of topics and its upvotes/downvotes
-Done Completed: Create, Read and Update operations without option of deletion not required on Class Topic and Class TopicData
+<br>Done Completed: Create, Read and Update operations without option of deletion not required on Class Topic and Class TopicData
 
 ● Req 2: Allow the user to submit topics. For this challenge, a “topic” is simply a string that does not exceed 255 characters
-Done Completed: Validation on dialog_fragment_create_topic.xml and Class Topic Validator (Redundant require to facilitate unit testing)
+<br>Done Completed: Validation on dialog_fragment_create_topic.xml and Class Topic Validator (Redundant require to facilitate unit testing)
 
 ● Req 3: Allow the user to upvote or downvote a topic. For this challenge, the user may upvote or downvote the same topic multiple times.
-Done Completed: Class Topic, TopicData and HomeTopicsRecycleViewAdaptor handle clicks
+<br>Done Completed: Class Topic, TopicData and HomeTopicsRecycleViewAdaptor handle clicks
 
 ● Req 4: Tapping a topic should expand that topic into a separate view (page)
 <br>Done Completed: Class MainActivity and ViewTopicActivity
