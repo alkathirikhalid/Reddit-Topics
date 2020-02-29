@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Reddit Topics</string>
-    <string name="action_settings">Settings</string>
     <!-- Topic Item -->
     <string name="topic_name">Topic name</string>
     <string name="up_vote">Up Vote</string>
