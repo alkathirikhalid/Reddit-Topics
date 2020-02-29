@@ -37,10 +37,11 @@ public class HomeTopicsRecycleViewAdaptor extends RecyclerView.Adapter<HomeTopic
 
     @Override
     public void onBindViewHolder(@NonNull HomeTopicsRecycleViewAdaptor.TopicRecycleViewHolder holder, int position) {
+        // Populate with Home data List
         holder.mTVTopicName.setText(TopicData.getAHomeTopic(position).getName());
         holder.mTVTopicUpVote.setText(TopicData.getAHomeTopic(position).getUpVote().toString());
         holder.mTVTopicDownVote.setText(TopicData.getAHomeTopic(position).getDownVote().toString());
-
+        // Allow Holder background toggle for item selected for navigation
         if (position == selectedItem) {
             holder.itemView.setBackgroundColor(Color.GREEN);
         } else {
@@ -50,11 +51,12 @@ public class HomeTopicsRecycleViewAdaptor extends RecyclerView.Adapter<HomeTopic
 
     @Override
     public int getItemCount() {
+        // Return home screen data size
         return TopicData.homeSize();
     }
 
     public interface TopicListener {
-        void onItemClicked(int position, Topic topic);
+        void onItemClicked(int position);
     }
 
     class TopicRecycleViewHolder extends RecyclerView.ViewHolder {
@@ -70,10 +72,10 @@ public class HomeTopicsRecycleViewAdaptor extends RecyclerView.Adapter<HomeTopic
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    topicListener.onItemClicked(getAdapterPosition(), TopicData.getAHomeTopic(getAdapterPosition()));
+                    topicListener.onItemClicked(getAdapterPosition());
                     selectedItem = getAdapterPosition();
-                    notifyDataSetChanged();
-                    //notifyItemChanged(getAdapterPosition());
+                    // When the view is clicked we need to trigger back ground drawing on new item
+                    notifyDataSetChanged();//notifyItemChanged(getAdapterPosition());
                 }
             });
             mBTopicUpVote.setOnClickListener(new View.OnClickListener() {
@@ -83,6 +85,7 @@ public class HomeTopicsRecycleViewAdaptor extends RecyclerView.Adapter<HomeTopic
                     topic.upVote();
                     TopicData.updateATopic(getAdapterPosition(), topic);
                     selectedItem = -1;
+                    // Up vote must trigger whole data set change to allow sorting
                     notifyDataSetChanged();
                 }
             });
@@ -94,8 +97,8 @@ public class HomeTopicsRecycleViewAdaptor extends RecyclerView.Adapter<HomeTopic
                     topic.downVote();
                     TopicData.updateATopic(getAdapterPosition(), topic);
                     selectedItem = -1;
-                    notifyDataSetChanged();
-                    // notifyItemChanged(getAdapterPosition());
+                    // Not required for sorting but need to remove item selected background
+                    notifyDataSetChanged();//notifyItemChanged(getAdapterPosition());
                 }
             });
         }
