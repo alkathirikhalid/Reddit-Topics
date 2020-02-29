@@ -5,4 +5,6 @@
     <dimen name="main_topic_name_width">100dp</dimen>
     <dimen name="main_vote_width">20dp</dimen>
     <dimen name="default_arrow_size">30sp</dimen>
+    <!-- View Topic -->
+    <dimen name="text_view_width_80">80dp</dimen>
 </resources>

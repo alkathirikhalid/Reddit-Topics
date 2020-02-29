@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ViewTopicActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/stat_1"
+        android:layout_width="@dimen/text_view_width_80"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/topic"
+        android:textColor="@color/text_color"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@+id/divider_1"
+        app:layout_constraintTop_toTopOf="@+id/stat_2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvtopicName"
+        android:layout_width="@dimen/text_view_width_80"
+        android:layout_height="wrap_content"
+        android:text="@string/topic_name"
+        android:textColor="@color/text_color"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/stat_1"
+        app:layout_constraintStart_toStartOf="@+id/stat_1"
+        app:layout_constraintTop_toBottomOf="@+id/stat_1" />
+
+    <View
+        android:id="@+id/divider_1"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:background="#ccc"
+        app:layout_constraintBottom_toBottomOf="@+id/tvdownVote"
+        app:layout_constraintEnd_toStartOf="@+id/stat_2"
+        app:layout_constraintTop_toTopOf="@+id/stat_2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/stat_2"
+        android:layout_width="@dimen/text_view_width_80"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/_8593"
+        android:textColor="@color/text_color"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvupVote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="@string/_0"
+        android:textColor="@color/text_color"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/stat_2"
+        app:layout_constraintStart_toStartOf="@+id/stat_2"
+        app:layout_constraintTop_toBottomOf="@+id/stat_2" />
+
+    <View
+        android:id="@+id/divider_2"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:background="#ccc"
+        app:layout_constraintBottom_toBottomOf="@+id/tvupVote"
+        app:layout_constraintStart_toEndOf="@+id/stat_2"
+        app:layout_constraintTop_toTopOf="@+id/stat_2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/stat_3"
+        android:layout_width="@dimen/text_view_width_80"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/_8595"
+        android:textColor="@color/text_color"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@+id/divider_2"
+        app:layout_constraintTop_toTopOf="@+id/stat_2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvdownVote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="@string/_0"
+        android:textColor="@color/text_color"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/stat_3"
+        app:layout_constraintStart_toStartOf="@+id/stat_3"
+        app:layout_constraintTop_toBottomOf="@+id/stat_3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

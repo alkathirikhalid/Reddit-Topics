@@ -5,12 +5,16 @@
     <string name="up_vote">Up Vote</string>
     <string name="_0">0</string>
     <string name="down_vote">Down Vote</string>
-    <!-- Create Topic Dialog Fragment -->
+    <!-- Create Topic Screen -->
     <string name="topic_name_requirement_error">Topic name must be 1 to 255 characters</string>
     <string name="create">Create</string>
     <!-- Home Screen -->
     <string name="saved_maximum_viewable_topics_20">Saved, maximum viewable topics 20</string>
+    <!-- View Topic Screen -->
+    <string name="topic">Topic</string>
     <!-- Global no Translation -->
     <string name="_8594" translatable="false">→</string>
+    <string name="_8593" translatable="false">↑</string>
+    <string name="_8595" translatable="false">↓</string>
     <string name="create_topic_dialog_fragment_tag" translatable="false">createTopicDialogFragment</string>
 </resources>

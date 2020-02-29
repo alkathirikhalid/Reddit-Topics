@@ -1,5 +1,6 @@
 package com.alkathirikhalid.reddittopics.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -64,6 +65,8 @@ public class MainActivity extends AppCompatActivity implements HomeTopicsRecycle
 
     @Override
     public void onItemClicked(int position) {
-        // TODO allow navigation to another screen to view topic
+        Intent intent = new Intent(this, ViewTopicActivity.class);
+        intent.putExtra(ViewTopicActivity.VIEW_TOP_BY_POSITION, position);
+        startActivity(intent);
     }
 }
