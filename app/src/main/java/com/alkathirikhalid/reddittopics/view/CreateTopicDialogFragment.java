@@ -40,13 +40,13 @@ public class CreateTopicDialogFragment extends DialogFragment {
         btCreateTopic = view.findViewById(R.id.btCreateTopic);
         tILTopicName = view.findViewById(R.id.tILTopicName);
         tIETTopicName = view.findViewById(R.id.tIETTopicName);
-
+        // Make the app user friendly by toggling the keyboard
         showKeyboard();
 
         btCreateTopic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // String never null empty 0
+                // String never null empty return 0
                 if (TopicValidator.inValidTopicName(tIETTopicName.getText().toString())) {
                     tILTopicName.setError(getString(R.string.topic_name_requirement_error));
                 } else {
@@ -55,15 +55,18 @@ public class CreateTopicDialogFragment extends DialogFragment {
                     TopicData.addATopic(topic);
                     // never null part of the screen
                     ((MainActivity) getActivity()).updateHomeScreen();
+                    // Make the app user friendly by toggling the keyboard
                     closeKeyboard();
                     dismiss();
                 }
             }
         });
-
         return view;
     }
 
+    /**
+     * Bring up the keyboard
+     */
     private void showKeyboard() {
         try {
             InputMethodManager inputMethodManager = (InputMethodManager) getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -74,6 +77,9 @@ public class CreateTopicDialogFragment extends DialogFragment {
 
     }
 
+    /**
+     * Bring down the keyboard
+     */
     private void closeKeyboard() {
         try {
             InputMethodManager inputMethodManager = (InputMethodManager) getContext().getSystemService(Context.INPUT_METHOD_SERVICE);

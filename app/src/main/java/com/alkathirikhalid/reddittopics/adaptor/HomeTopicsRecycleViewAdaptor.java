@@ -22,6 +22,7 @@ import com.google.android.material.textview.MaterialTextView;
  */
 public class HomeTopicsRecycleViewAdaptor extends RecyclerView.Adapter<HomeTopicsRecycleViewAdaptor.TopicRecycleViewHolder> {
     private TopicListener topicListener;
+    // Selected list item on screen
     private int selectedItem = -1;
 
     public HomeTopicsRecycleViewAdaptor(TopicListener topicListener) {

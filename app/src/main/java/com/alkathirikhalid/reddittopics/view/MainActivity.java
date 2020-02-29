@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements HomeTopicsRecycle
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-
+        // Set up Adaptor with a listener, the data will be retrieved from Topic Data
         adapter = new HomeTopicsRecycleViewAdaptor(this);
         recyclerView.setAdapter(adapter);
 
@@ -54,7 +54,8 @@ public class MainActivity extends AppCompatActivity implements HomeTopicsRecycle
     }
 
     void updateHomeScreen() {
-        // adapter.notifyDataSetChanged();
+        // We only need the last added item in the list,
+        // notify item inserted is faster than notify Data Set Changed
         adapter.notifyItemInserted(TopicData.size());
         if (TopicData.size() > 20) {
             Toast.makeText(this, getString(R.string.saved_maximum_viewable_topics_20), Toast.LENGTH_LONG).show();
