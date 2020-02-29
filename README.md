@@ -31,7 +31,7 @@ hows and whys of your implementation and the assumptions you are making.
 <br>Done Completed: in App Code and here in
 
 ● Req 9: If you are using a boilerplate or code scaffolding tools to generate the project, please clearly indicate it on your README and indicate via comments / README on the parts of the code that were written by you.
-<br>Done Completed: None other than default Android Basic Activity Template with floating action bar and Material Design
+<br>Done Completed: None other than default Android Basic Activity Template with floating action bar and Material Design no special architecture or library used
 
 ● Req 10: Provide a link to an online accessible Git repository such as Github, Bitbucket etc. (preferred)
 <br>Done Completed: Here in, enjoy
