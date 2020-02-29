@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/main_layout_padding">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/mTVTopicName"
+        android:layout_width="@dimen/main_topic_name_width"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/topic_name" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mBTopicUpVote"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/up_vote" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/mTVTopicUpVote"
+        android:layout_width="@dimen/main_vote_width"
+        android:layout_height="wrap_content"
+        android:text="@string/_0"
+        android:textAlignment="center" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mBTopicDownVote"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/down_vote" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/mTVTopicDownVote"
+        android:layout_width="@dimen/main_vote_width"
+        android:layout_height="wrap_content"
+        android:text="@string/_0"
+        android:textAlignment="center" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_8594"
+        android:textAlignment="viewEnd"
+        android:textSize="@dimen/default_arrow_size" />
+</LinearLayout>

@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Reddit Topics</string>
     <string name="action_settings">Settings</string>
+    <!-- Topic Item -->
+    <string name="topic_name">Topic name</string>
+    <string name="up_vote">Up Vote</string>
+    <string name="_0">0</string>
+    <string name="down_vote">Down Vote</string>
+    <!-- Global no Translation -->
+    <string name="_8594" translatable="false">→</string>
 </resources>
